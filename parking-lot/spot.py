@@ -1,7 +1,7 @@
 from vehicle_type import VehicleType
-from parking_spot_type import ParkingSpotType
+from spot_type import SpotType
 
-class ParkingSpot:
+class Spot:
     def __init__(self, spot_id, spot_type):
         self.id = spot_id
         self.type = spot_type
@@ -14,9 +14,9 @@ class ParkingSpot:
         if vehicle.type == VehicleType.BIKE:
             return True
         if vehicle.type == VehicleType.CAR:
-            return self.type in [ParkingSpotType.MEDIUM, ParkingSpotType.LARGE]
+            return self.type in [SpotType.MEDIUM, SpotType.LARGE]
         if vehicle.type == VehicleType.TRUCK:
-            return self.type == ParkingSpotType.LARGE
+            return self.type == SpotType.LARGE
         return False
 
     def park(self, vehicle):

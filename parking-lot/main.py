@@ -1,15 +1,15 @@
 from vehicle_type import VehicleType
 from vehicle import Vehicle
-from parking_spot_type import ParkingSpotType
-from parking_spot import ParkingSpot
+from spot_type import SpotType
+from spot import Spot
 from floor import Floor
 from parking_lot import ParkingLot
 
 # create spots
 floor1_spots = [
-    ParkingSpot(1, ParkingSpotType.SMALL),
-    ParkingSpot(2, ParkingSpotType.MEDIUM),
-    ParkingSpot(3, ParkingSpotType.LARGE)
+    Spot(1, SpotType.SMALL),
+    Spot(2, SpotType.MEDIUM),
+    Spot(3, SpotType.LARGE)
 ]
 floor1 = Floor(1, floor1_spots)
 lot = ParkingLot([floor1])

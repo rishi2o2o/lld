@@ -1,7 +1,7 @@
 class Floor:
     def __init__(self, floor_id, spots):
         self.id = floor_id
-        self.spots = spots  # list of ParkingSpots
+        self.spots = spots  # list of parking spots
 
     def find_spot(self, vehicle):
         for spot in self.spots:
