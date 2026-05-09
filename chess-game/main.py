@@ -49,8 +49,9 @@ def main():
         try:
             start, end = parse_move(move_text)
             game.make_move(start, end)
-        except ValueError as error:
-            print(f"Invalid move: {error}")
+
+        except Exception as e:
+            print(f"Invalid move: {e}")
 
     game.board.print_board()
     print(f"Game over: {game.game_status.name}")
